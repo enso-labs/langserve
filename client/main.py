@@ -1,0 +1,21 @@
+from langgraph_sdk import get_client
+from pprint import pprint
+
+async def run_cron():
+    client = get_client(url="http://localhost:2024")
+    # Using the graph deployed with the name "agent"
+    assistant_id = "agent"
+    # create thread
+    cron_job_stateless = await client.crons.create(
+        assistant_id,
+        schedule="* * * * *",
+        input={"messages": [{"role": "user", "content": "What time is it?"}]},
+    )
+    pprint(cron_job_stateless)
+
+async def main():
+    await run_cron()
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())

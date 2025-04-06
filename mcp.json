@@ -1,0 +1,8 @@
+{
+  "mcp": {
+		"enso_basic": {
+			"transport": "sse",
+			"url": "https://mcp.enso.sh/sse"
+		}
+	}
+}
