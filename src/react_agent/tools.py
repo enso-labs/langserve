@@ -119,5 +119,5 @@ session = MCPClient()
 
 TOOLS: List[Callable[..., Any]] = [browser_use, search, get_stock_price]
 
-mcp_tools = asyncio.run(session.get_tools())
-TOOLS.extend(mcp_tools)
+# mcp_tools = asyncio.run(session.get_tools())
+# TOOLS.extend(mcp_tools)

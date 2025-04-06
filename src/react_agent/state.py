@@ -53,6 +53,14 @@ class State(InputState):
     It is set to 'True' when the step count reaches recursion_limit - 1.
     """
 
+    # tools: list = field(default_factory=list)
+    # """
+    # A list of tools that the agent can use.
+    
+    # These tools are dynamically provided when creating the agent instance,
+    # rather than being statically defined at the module level.
+    # """
+
     # Additional attributes can be added here as needed.
     # Common examples include:
     # retrieved_documents: List[Document] = field(default_factory=list)
