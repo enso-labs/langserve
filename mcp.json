@@ -2,7 +2,7 @@
   "mcp": {
 		"enso_basic": {
 			"transport": "sse",
-			"url": "http://localhost:8010/sse"
+			"url": "https://mcp.enso.sh/sse"
 		}
 	}
 }
