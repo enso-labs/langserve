@@ -6,9 +6,11 @@ from langgraph.prebuilt import create_react_agent
 from langchain_anthropic import ChatAnthropic
 from react_agent.mcp import MCPClient
 from react_agent.tools import TOOLS
+from react_agent.utils import load_chat_model
 
 session = MCPClient()
-model = ChatAnthropic(model="claude-3-5-sonnet-latest")
+# model = load_chat_model("anthropic/claude-3-5-sonnet-latest")
+model = load_chat_model("openai/o3-mini")
 
 @asynccontextmanager
 async def make_graph():
