@@ -2,7 +2,7 @@ from langgraph_sdk import get_client
 from pprint import pprint
 
 async def run_cron():
-    client = get_client(url="http://localhost:2024")
+    client = get_client(url="http://localhost:8123")
     # Using the graph deployed with the name "agent"
     assistant_id = "agent"
     # create thread
@@ -14,7 +14,9 @@ async def run_cron():
     pprint(cron_job_stateless)
 
 async def main():
-    await run_cron()
+   client = get_client(url="http://localhost:8123")
+   my_assistant = await client.assistants.search()
+   pprint(my_assistant)
 
 if __name__ == "__main__":
     import asyncio
